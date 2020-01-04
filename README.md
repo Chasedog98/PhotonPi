@@ -41,6 +41,7 @@ To increase the size do the following
 3. Type in the following: sudo dd bs=1M if=/dev/zero of=/piusb.bin count=2048
 
 The count is the space to format 2048 = 2GB 4096= 4GB etc.
+
 4.  Format it :sudo mkdosfs /piusb.bin -F 32 -I
 
 --------------------------------
@@ -48,3 +49,12 @@ The count is the space to format 2048 = 2GB 4096= 4GB etc.
 Location: /var/www/html
 
 V1.1.0 HTML/PHP files are published under PhotonPi_V1.1.0 for reference
+
+## Video Streaming Change
+If you need to change the resolution or FPS of the live stream go to the following:
+
+/etc/..........
+
+Edit the following line of code:
+
+raspivid  -t -0 -w 1080 -h 720 -awb auto -fps 30 -b 1200000 -o - |ffmpeg -loglevel quiet -i - -vcodec copy -an -f flv -metadata streamName=myStream tcp://0.0.0.0:6666&
