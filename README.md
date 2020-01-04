@@ -13,6 +13,7 @@ SetUp:
 3. After image is created create a file called wpa_supplicant.conf on the root of the SD card with the following inside:
 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+
 update_config=1
 country=«your_ISO-3166-1_two-letter_country_code»
 
