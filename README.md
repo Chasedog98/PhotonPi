@@ -25,6 +25,8 @@ This is a shareable camera feed for others to view. If no camera feed is present
 
 7. Go to photonpi.local/home.html this is the user interface of PhotonPi, take a look around. These pages are user changeable through HTML, Java, and PHP.
 
+![image](https://github.com/Chasedog98/PhotonPi/blob/master/Images/photonpi2.png)
+
 ## Connecting to the Photon:
 1. Solder a 3 pin header to UART1 located near the USB port on the board. Solder a 3 pin header to the the pi as shown below. 
 ![image](https://github.com/Chasedog98/PhotonPi/blob/master/Images/Photon_Board.png)
