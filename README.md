@@ -59,6 +59,6 @@ raspivid  -t -0 -w 1080 -h 720 -awb auto -fps 20 -b 1200000 -o - |ffmpeg -loglev
 
 ## Known Changes Coming
 - Finish Serial Terminal
-- Switch away from Flash Player due to Adobe discontinuing support in 2020 
+- Switch away from Flash Player due to Adobe discontinuing support in 2020(Will be a forced update)
 - Login with username and password
 - Multiple device connection
