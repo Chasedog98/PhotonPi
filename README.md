@@ -1,19 +1,19 @@
 # PhotonPi V1.1.0
 -------------------
-This is an Alph version of PhotonPi please use at your own risk
+This is an Alpha version of PhotonPi please use at your own risk.
 -------------------
 PhotonPi is a web server for the Anycubic Photon using a Raspberry Pi Zero W. 
 __________________________
 Flashing Image onto Pi
 ----------------------------
 ## Requirements:
-Minimum 8GB SD card if using network based USB drive. 4GB SD card for web server interface no network based USB drive. Raspberry Pi Zero W(not tested with other Pi's currently) 
+Minimum 8GB SD card if using network-based USB drive. 4GB SD card for web server interface no network-based USB drive. Raspberry Pi Zero W(not tested with other Pi's currently) 
 ## SetUp:
 1. Format SD card as a Fat32
 2. Download the Latest Version of PhotonPi and use Etcher or Win32 to put the image on the SD card.
-3. After image is created create a file called wpa_supplicant.conf on the root of the SD card with the following from: [wpa_supplicant.md](wpa_supplicant.md) Fill out the Country, ssid, and psk(password) for connecting to WiFi. Save the file. Format is very important and can lead to not connecting to wifi if not formated correctly please click the edit button on github for the correct format.
+3. After the image is created create a file called wpa_supplicant.conf on the root of the SD card with the following from: [wpa_supplicant.md](wpa_supplicant.md) Fill out the Country, ssid, and psk(password) for connecting to WiFi. Save the file. The format is very important and can lead to not connecting to wifi if not formated correctly please click the edit button on github for the correct format.
  
-4. Eject SD card, insert it into the Pi, and boot up the Pi using the USB port. Booting can take a few minutes and will connect and disconnect from computer a few times,this is the network based USB drive from the pi. Do not try to fix the usb if windows says there is a problem! 
+4. Eject SD card, insert it into the Pi, and boot up the Pi using the USB port. Booting can take a few minutes and will connect and disconnect from the computer a few times, this is the network-based USB drive from the pi. Do not try to fix the USB if windows says there is a problem! 
 
 5. Under network connection in file explorer you should see a computer named PhotonPi, this is the place where you upload files to. Create a test file and make sure it can be seen on the network USB drive, this might take a few seconds and it should disconnect/ reconnect to the computer.
 
@@ -23,7 +23,7 @@ Minimum 8GB SD card if using network based USB drive. 4GB SD card for web server
 
 This is a shareable camera feed for others to view. If no camera feed is present make sure flash is enabled.
 
-7. Go to photonpi.local/home.html this is the user interface of PhotonPi, take a look around. These pages are user changable through HTML, Java, and PHP.
+7. Go to photonpi.local/home.html this is the user interface of PhotonPi, take a look around. These pages are user changeable through HTML, Java, and PHP.
 
 ## Connecting to the Photon:
 1. Solder a 3 pin header to UART1 located near the USB port on the board. Solder a 3 pin header to the the pi as shown below. 
