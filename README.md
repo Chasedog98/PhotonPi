@@ -7,7 +7,7 @@ __________________________
 Flashing Image onto Pi
 ----------------------------
 ## Requirements:
-Minimum 8GB SD card if using network-based USB drive. 4GB SD card for web server interface no network-based USB drive. Raspberry Pi Zero W(not tested with other Pi's currently) 
+Minimum 8GB SD card if using network-based USB drive. 4GB SD card for web server interface no network-based USB drive. Raspberry Pi Zero W(not tested with other Pi's currently). Full image currently at 3.79GB.
 ## SetUp:
 1. Format SD card as a Fat32
 2. Download the Latest Version of [PhotonPi](https://drive.google.com/drive/folders/1rTr7rWyf3K85M9JtZb1F_c4Fv0-O_AWz?usp=sharing) and use Etcher or Win32 to put the image on the SD card.
