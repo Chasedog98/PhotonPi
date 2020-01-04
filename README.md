@@ -10,7 +10,7 @@ Flashing Image onto Pi
 Minimum 8GB SD card if using network-based USB drive. 4GB SD card for web server interface no network-based USB drive. Raspberry Pi Zero W(not tested with other Pi's currently) 
 ## SetUp:
 1. Format SD card as a Fat32
-2. Download the Latest Version of PhotonPi and use Etcher or Win32 to put the image on the SD card.
+2. Download the Latest Version of [PhotonPi](https://drive.google.com/drive/folders/1rTr7rWyf3K85M9JtZb1F_c4Fv0-O_AWz?usp=sharing) and use Etcher or Win32 to put the image on the SD card.
 3. After the image is created create a file called wpa_supplicant.conf on the root of the SD card with the following from: [wpa_supplicant.md](wpa_supplicant.md) Fill out the Country, ssid, and psk(password) for connecting to WiFi. Save the file. The format is very important and can lead to not connecting to wifi if not formated correctly please click the edit button on github for the correct format.
  
 4. Eject SD card, insert it into the Pi, and boot up the Pi using the USB port. Booting can take a few minutes and will connect and disconnect from the computer a few times, this is the network-based USB drive from the pi. Do not try to fix the USB if windows says there is a problem! 
