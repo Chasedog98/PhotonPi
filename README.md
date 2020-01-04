@@ -51,11 +51,11 @@ V1.1.0 HTML/PHP files are published under PhotonPi_V1.1.0 for reference
 ## Video Streaming Change
 If you need to change the resolution or FPS of the live stream go to the following:
 
-/etc/..........
+/etc/rc.local
 
 Edit the following line of code:
 
-raspivid  -t -0 -w 1080 -h 720 -awb auto -fps 30 -b 1200000 -o - |ffmpeg -loglevel quiet -i - -vcodec copy -an -f flv -metadata streamName=myStream tcp://0.0.0.0:6666&
+raspivid  -t -0 -w 1080 -h 720 -awb auto -fps 20 -b 1200000 -o - |ffmpeg -loglevel quiet -i - -vcodec copy -an -f flv -metadata streamName=myStream tcp://0.0.0.0:6666&
 
 ## Known Changes Coming
 - Finish Serial Terminal
