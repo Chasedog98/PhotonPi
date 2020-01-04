@@ -18,7 +18,9 @@ SetUp:
 5. Under network connection in file explorer you should see a computer named PhotonPi, this is the place where you fill upload files to. Create a test file and make sure it can be seen on the network USB drive, this might take a few seconds and it should disconnect/ reconnect to the computer.
 
 6. Check the website by going to photonpi.local/ in Chrome. you should see the following:
-![image](https://user-images.githubusercontent.com/11083514/43782437-4634c3ea-9a57-11e8-8dab-698e92a305be.png)
+
+![image](https://github.com/Chasedog98/PhotonPi/blob/master/photonpi.png)
+
 This is a shareable camera feed for others to view.
 
 7. Go to photonpi.local/home.html. This is the user interface of PhotonPi, take a look around. These pages are user changable through HTML, Java, and PHP.
