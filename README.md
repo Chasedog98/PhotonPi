@@ -12,20 +12,20 @@ SetUp:
 2. Download the Latest Version of PhotonPi and use Etcher or Win32 to put the image on the SD card.
 3. After image is created create a file called wpa_supplicant.conf on the root of the SD card with the following inside:
 
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 
-update_config=1
+    update_config=1
 
-country=«your_ISO-3166-1_two-letter_country_code»
+    country=«your_ISO-3166-1_two-letter_country_code»
 
-network={
+    network={
 
-    ssid="«your_SSID»"
-    
-    psk="«your_PSK»"
-    
-    key_mgmt=WPA-PSK
-}
+        ssid="«your_SSID»"
+
+        psk="«your_PSK»"
+
+        key_mgmt=WPA-PSK
+    }
 
 Fill out the Country, ssid, and psk(password) for connecting to WiFi. Save the file.
 4. Eject SD card, insert it into the Pi, and boot up the Pi using the USB port connected to a computer. Booting can take a few minutes and will connect and disconnect to the computer a few times,this is the network based USB drive from the pi.
