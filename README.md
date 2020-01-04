@@ -17,7 +17,7 @@ Minimum 8GB SD card if using network based USB drive. 4GB SD card for web server
 
 5. Under network connection in file explorer you should see a computer named PhotonPi, this is the place where you upload files to. Create a test file and make sure it can be seen on the network USB drive, this might take a few seconds and it should disconnect/ reconnect to the computer.
 
-6. Check the website by going to photonpi.local/ in Chrome. you should see the following:
+6. Check the website by going to photonpi.local/ in Chrome. You should see the following:
 
 ![image](https://github.com/Chasedog98/PhotonPi/blob/master/photonpi.png)
 
@@ -46,4 +46,5 @@ The count is the space to format 2048 = 2GB 4096= 4GB etc.
 --------------------------------
 ## Editing HTML/Java/PHP
 Location: /var/www/html
+
 V1.1.0 HTML/PHP files are published under PhotonPi_V1.1.0 for reference
