@@ -19,7 +19,7 @@ Minimum 8GB SD card if using network based USB drive. 4GB SD card for web server
 
 6. Check the website by going to photonpi.local/ in Chrome. You should see the following:
 
-![image](https://github.com/Chasedog98/PhotonPi/blob/master/photonpi.png)
+![image](https://github.com/Chasedog98/PhotonPi/blob/master/Images/photonpi.png)
 
 This is a shareable camera feed for others to view. If no camera feed is present make sure flash is enabled.
 
@@ -27,8 +27,8 @@ This is a shareable camera feed for others to view. If no camera feed is present
 
 ## Connecting to the Photon:
 1. Solder a 3 pin header to UART1 located near the USB port on the board. Solder a 3 pin header to the the pi as shown below. 
-![image](https://github.com/Chasedog98/PhotonPi/blob/master/Photon_Board.png)
-![image](https://github.com/Chasedog98/PhotonPi/blob/master/PI_ZERO.png)
+![image](https://github.com/Chasedog98/PhotonPi/blob/master/Images/Photon_Board.png)
+![image](https://github.com/Chasedog98/PhotonPi/blob/master/Images/PI_ZERO.png)
 2. Connect GND to GND, Rx to Tx, and Tx to Rx
 3. Test connections by booting up Photon with the Pi connected and see if you can send Gcode to the machine, start with Home first.
 
