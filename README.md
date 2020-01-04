@@ -24,7 +24,7 @@ Minimum 8GB SD card if using network based USB drive. 4GB SD card for web server
 This is a shareable camera feed for others to view. If no camera feed is present make sure flash is enabled.
 
 7. Go to photonpi.local/home.html this is the user interface of PhotonPi, take a look around. These pages are user changable through HTML, Java, and PHP.
---------------------------------------
+
 ## Connecting to the Photon:
 1. Solder a 3 pin header to UART1 located near the USB port on the board. Solder a 3 pin header to the the pi as shown below. 
 ![image](https://github.com/Chasedog98/PhotonPi/blob/master/Photon_Board.png)
@@ -32,7 +32,6 @@ This is a shareable camera feed for others to view. If no camera feed is present
 2. Connect GND to GND, Rx to Tx, and Tx to Rx
 3. Test connections by booting up Photon with the Pi connected and see if you can send Gcode to the machine, start with Home first.
 
---------------------------------
 ## Changing Network USB size:
 The default size is 512MB of Network USB Storage
 To increase the size do the following
@@ -44,7 +43,6 @@ The count is the space to format 2048 = 2GB 4096= 4GB etc.
 
 4.  Format it :sudo mkdosfs /piusb.bin -F 32 -I
 
---------------------------------
 ## Editing HTML/Java/PHP
 Location: /var/www/html
 
@@ -58,3 +56,9 @@ If you need to change the resolution or FPS of the live stream go to the followi
 Edit the following line of code:
 
 raspivid  -t -0 -w 1080 -h 720 -awb auto -fps 30 -b 1200000 -o - |ffmpeg -loglevel quiet -i - -vcodec copy -an -f flv -metadata streamName=myStream tcp://0.0.0.0:6666&
+
+## Known Changes Coming
+- Finish Serial Terminal
+- Switch away from Flash Player due to Adobe discontinuing support in 2020 
+- Login with username and password
+- Multiple device connection
