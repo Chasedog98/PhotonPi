@@ -1,4 +1,4 @@
-# PhotonPi
+# PhotonPi V1.1.0
 -------------------
 This is an Alph version of PhotonPi please use at your own risk
 -------------------
@@ -28,6 +28,8 @@ This is a shareable camera feed for others to view.
 --------------------------------------
 Connecting to the Photon:
 1. Solder a 3/4pin header to UART1 located near the USB port on the board. Solder a 3 pin header to the the pi as shown below. 
+![image](https://github.com/Chasedog98/PhotonPi/blob/master/Photon_Board.png)
+![image](https://github.com/Chasedog98/PhotonPi/blob/master/PI_ZERO.png)
 2. Connect GND to GND, Rx to Tx, and Tx to Rx
 3. Test connections by booting up Photon with the Pi connected and see if you can send Gcode to the machine, start with Home first.
 
