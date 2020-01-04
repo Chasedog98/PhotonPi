@@ -1,0 +1,213 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__photonpi_local"><head>
+<title>PhotonPi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: DodgerBlue;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+ }
+</style>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script type="text/javascript" src="strobe/lib/swfobject.js"></script>
+   <script type="text/javascript">        
+         
+       // Create a StrobeMediaPlayback configuration 
+      var parameters = {  
+                     src: "rtmp://" + window.location.hostname + "/flvplayback/myStream",  
+                              autoPlay: true,  
+                     controlBarAutoHide: false,  
+                     playButtonOverlay: true,  
+                     showVideoInfoOverlayOnStartUp: false,  
+                              optimizeBuffering : false,  
+                              initialBufferTime : 0.1,  
+                              expandedBufferTime : 0.1,  
+                              minContinuousPlayback : 0.1,  
+                     poster: "strobe/images/poster.png"  
+                   };  
+          
+      // Embed the player SWF:          
+      swfobject.embedSWF
+         ( "strobe/StrobeMediaPlayback.swf"
+         , "strobeMediaPlayback"
+         , 640
+         , 480
+         , "10.1.0"
+         , {}
+         , parameters
+         , { allowFullScreen: "true"}
+         , { name: "strobeMediaPlayback" }
+         );
+      
+    </script><style type="text/css" media="screen">#strobeMediaPlayback {visibility:hidden}</style>
+<style type="text/css" media="screen">#strobeMediaPlayback {visibility:hidden}
+        /* Style buttons */
+        .btn {
+          background-color: DodgerBlue; /* Blue background */
+          border: none; /* Remove borders */
+          color: white; /* White text */
+          padding: 12px 16px; /* Some padding */
+          font-size: 16px; /* Set a font size */
+          cursor: pointer; /* Mouse pointer on hover */
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+          background-color: RoyalBlue;
+        }
+	.divider{
+            width:auto;
+            height:10px;
+            display:inline-block;
+        }
+        .dividerW{
+            width:5px;
+            height:auto;
+            display:inline-block;
+        }
+	.tab { margin-left: 40px;
+	  margin-right: 40px;
+	}
+	}
+</style>     
+</head>
+<body data-gr-c-s-loaded="true">
+
+<div class="topnav" id="myTopnav">
+  <a class="active" href="index.html" color="blue"><i class="fa fa-home"></i> Home</a>
+  
+  
+  <div class="dropdown">
+    <button class="dropbtn"> About <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <p class="tab">This is a alpha version of PhotonPi.</p>
+      <p class="tab">Known issues: Pause and wait for pause to finish before stopping print or the LED and screen will stay on after stop.</p>     
+      <p class="tab">Created By: Chase Hughes.</p>
+    </div>    
+  </div> 
+  <a>PhotonPi V1.1.0</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">
+	<i class="fa fa-fw fa-bars"></i>
+  </a>
+</div>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<div class="divider"></div>
+<center>
+   <object type="application/x-shockwave-flash" name="strobeMediaPlayback" data="strobe/StrobeMediaPlayback.swf" width="640" height="480" id="strobeMediaPlayback" style="visibility: visible;"><param name="allowFullScreen" value="true"><param name="flashvars" value="src=rtmp://photonpi.local/flvplayback/myStream&amp;autoPlay=true&amp;controlBarAutoHide=false&amp;playButtonOverlay=true&amp;showVideoInfoOverlayOnStartUp=false&amp;optimizeBuffering=false&amp;initialBufferTime=0.1&amp;expandedBufferTime=0.1&amp;minContinuousPlayback=0.1&amp;poster=strobe/images/poster.png"></object>
+</center>
+
+
+</body></html>

@@ -1,0 +1,334 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__photonpi_local"><head>
+<title>PhotonPi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: DodgerBlue;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+ }
+</style>
+    
+   
+    
+   
+   <style type="text/css" media="screen">#strobeMediaPlayback {visibility:hidden}</style>
+<style type="text/css" media="screen">#strobeMediaPlayback {visibility:hidden}
+	* {
+	  box-sizing: border-box;
+	}
+
+	/* Create two equal columns that floats next to each other */
+	.column {
+	  float: left;
+	  width: 50%;
+	  padding: 10px;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: right;
+	  clear: both;
+	}
+        /* Style buttons */
+        .btn {
+          background-color: DodgerBlue; /* Blue background */
+          border: none; /* Remove borders */
+          color: white; /* White text */
+          padding: 12px 16px; /* Some padding */
+          font-size: 16px; /* Set a font size */
+          cursor: pointer; /* Mouse pointer on hover */
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+          background-color: RoyalBlue;
+        }
+	.divider{
+            width:auto;
+            height:10px;
+            display:inline-block;
+        }
+        .dividerW{
+            width:5px;
+            height:auto;
+            display:inline-block;
+        }
+	.tab { margin-left: 40px;
+	  margin-right: 40px;
+	}
+</style>     
+</head>
+<body data-gr-c-s-loaded="true">
+
+<div class="topnav" id="myTopnav">
+  <a class="active" href="home.html" color="blue"><i class="fa fa-home"></i> Home</a>
+  
+  
+  <div class="dropdown">
+    <button class="dropbtn"> About <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <p class="tab">This is a alpha version of PhotonPi.</p>
+      <p class="tab">Known issues: Pause and wait for pause to finish before stopping print or the LED and screen will stay on after stop.</p>     
+      <p class="tab">Created By: Chase Hughes.</p>
+    </div>    
+  </div> 
+  <a href="gcode.html"><i class="fa fa-codepen"></i> Gcode</a>
+  <a href="terminal.html"><i class="fa fa-terminal"></i> Terminal</a>
+  <a>PhotonPi V1.1.0</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">
+	<i class="fa fa-fw fa-bars"></i>
+  </a>
+</div>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>G0 Z10</h2>
+    <p>Move Z axis at max speed</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>G0 Z10 F600</h2>
+    <p>Move Z axis at F speed</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>G28 Z</h2>
+    <p>Home Z Axis</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <h2>G90</h2>
+    <p>Absolute Positioning</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>G91</h2>
+    <p>Incremental Positioning</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>M20</h2>
+    <p>List SD Card</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>M23</h2>
+    <p>Select File on SD Card</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <h2>M24</h2>
+    <p>Starts printing the M6032 open file on memory</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>M25</h2>
+    <p>Pause Print</p>
+    
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>M27</h2>
+    <p>Report SD print status</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>M30</h2>
+    <p>Delete file from SD Card</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <h2>M33</h2>
+    <p>Stops print *</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>M105</h2>
+    <p>returns sensor temperatures</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>M106</h2>
+    <p>Turn on Fan, only works during print</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>M107</h2>
+    <p>Turn off Fan, Only works during print</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <h2>M114</h2>
+    <p>Get current position</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>M115</h2>
+    <p>Firmware Info</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>M4001</h2>
+    <p>Returns the configured stepper movement for all axis</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>M6030"*"</h2>
+    <p>starts a print file name imeddiatly</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <h2>M6032"*"</h2>
+    <p>Reads a File Into Memory to be started with M6045</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>M6040 I100</h2>
+    <p>Reboot I defines the delay before restart</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>MM6045 I4000 "M24"</h2>
+    <p>Waits delay time and prints the M6032 open file on memory</p>
+  </div>
+</div>
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>M7506 I636264 T0//0; 1; color_flip</h2>
+    <p>Changes UI colours Negative/Positive/or switch watever its on</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <h2>M8512 "configFile.gcode"</h2>
+    <p>Dumps the current config.gcode EEPROM data into a file</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>M9005 "Network","Password"</h2>
+    <p></p>
+  </div>
+</div>
+
+
+
+</body></html>
