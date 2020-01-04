@@ -4,7 +4,7 @@ This is an Alph version of PhotonPi please use at your own risk
 -------------------
 PhotonPi is a web server for the Anycubic Photon using a Raspberry Pi Zero W. It uses the Photon USB port and UART1 port to create a user friendly interface for communication and file upload. The usd port is used for network based USB stick and to power the Pi. The serial port is used to exacute Gcode to start, stop, pause a print, and more. This web server also has the Pi camera enabled to watch the print to make sure it has not failed. 
 __________________________
-# Flashing Image onto Pi
+Flashing Image onto Pi
 ----------------------------
 Requirements: Minimum 8GB SD card if using network based USB drive. 4GB SD card for web server interface. Raspberry Pi Zero W(not tested with other Pi's currently) 
 SetUp:
@@ -15,11 +15,15 @@ SetUp:
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 
 update_config=1
+
 country=«your_ISO-3166-1_two-letter_country_code»
 
 network={
+
     ssid="«your_SSID»"
+    
     psk="«your_PSK»"
+    
     key_mgmt=WPA-PSK
 }
 
